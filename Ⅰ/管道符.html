@@ -34,7 +34,7 @@
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="tex2jax_ignore">
-  <div id="nav"><div>Next: <a href='脚本的执行方法.html'>脚本的执行方法</a>, Previous: <a href='关机和重启命令.html'>关机和重启命令</a>, Up: <a href='index.html'>Index</a></div></div>
+  
   <div id="titlearea">
     <h2>管道符</h2>
   </div>
@@ -67,7 +67,9 @@
 </table>
 <p>*其中，<code>shift+\</code>意味着<code>|</code><br>例如：<code>date ; tar -zcvf etc.tar.gz /etc ; date</code>可以计算中间打包压缩命令执行的耗时<br>再如，<code>ls &amp;&amp; echo yes || echo no</code>，第一个命令正确执行，输出yes，错误执行，输出no</p>
 <h3 id="-">管道符</h3>
-<p>命令格式：<code>命令1 | 命令2</code>，有一定的编程思想在里面 命令1的正确输出作为命令2的操作对象，和逻辑与不一样<br>例如，<code>ls -l /etc | more</code>代表将<code>ls -l /etc</code>的输出分屏显示<br>再如，<code>netstat -an | grep ESTABLISHED</code>代表搜索<code>netstat -an</code>输出中带有ESTABLISHED的行<br>如果再变成<code>netstat -an | grep ESTABLISHED | wc -l</code>，此为多管道符命令，代表到最后统计带有ESTABLISHED的行的数目，即可看出服务器上连接了多少人</p>
+<p>命令格式：<code>命令1 | 命令2</code>，有一定的编程思想在里面 命令1的正确输出作为命令2的操作对象，和逻辑与不一样<br>例子：</p>
+<ul>
+<li><code>ls -l /etc | more</code>代表将<code>ls -l /etc</code>的输出分屏显示</li><li><code>netstat -an | grep ESTABLISHED</code>代表搜索<code>netstat -an</code>输出中带有ESTABLISHED的行<br>如果再变成<code>netstat -an | grep ESTABLISHED | wc -l</code>，此为多管道符命令，代表到最后统计带有ESTABLISHED的行的数目，即可看出服务器上连接了多少人</li><li>如果原本使用<code>cat</code>输出的内容中有很多重复，可在后面加上<code>|uniq</code>去重</li></ul>
 </div></div>
 </body>
 </html>

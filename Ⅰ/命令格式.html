@@ -34,7 +34,7 @@
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class="tex2jax_ignore">
-  <div id="nav"><div>Next: <a href='目录处理命令（上）.html'>目录处理命令（上）</a>, Previous: <a href='链接命令.html'>链接命令</a>, Up: <a href='index.html'>Index</a></div></div>
+  
   <div id="titlearea">
     <h2>命令格式</h2>
   </div>
@@ -57,6 +57,7 @@ $RECYCLE.BIN	.DS_Store	Learning_Python	myBooks
 ..		A*算法		Thumbs.db	实习小结.md</code></pre><div class='cell markdown-cell'><p><code>-a</code> 显示所有文件，包括隐藏文件<br><code>-la</code> 详细显示所有文件</p>
 </div><pre class='cell code-cell'><code>ls -ld ~/desktop
 drwx------+ 12 Jeff  staff  408  4 10 17:07 /Users/Jeff/desktop</code></pre><div class='cell markdown-cell'><p><code>-d</code> 显示目录属性<br><code>-ld</code> 详细显示目录属性</p>
+</div><div class='cell markdown-cell'><p>对目录如果没有w权限，即使里面的文件有写权限，也不能对文件进行移动，重命名操作，此时，需要给目录加上w权限：<code>chmod +w</code>（注意此时cwd是此目录）</p>
 </div></div>
 </body>
 </html>
